@@ -1,10 +1,10 @@
-# anydoor
+# wondergate
 Node.js Static Web Server
 
 ## 安装
 
 ```
-npm i -g anydoor
+npm i -g wondergate
 ```
 
 ## 使用方法
