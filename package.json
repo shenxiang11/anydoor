@@ -1,0 +1,13 @@
+{
+  "name": "anydoor",
+  "version": "0.0.1",
+  "bin": {
+    "anydoor": "bin/anydoor"
+  },
+  "main": "src/app.js",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "handlebars": "^4.0.11",
+    "yargs": "^10.0.3"
+  }
+}
