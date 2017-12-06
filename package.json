@@ -1,8 +1,8 @@
 {
   "name": "wondergate",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "bin": {
-    "anydoor": "bin/wondergate"
+    "wondergate": "bin/wondergate"
   },
   "main": "src/app.js",
   "dependencies": {
