@@ -1,6 +1,6 @@
 {
   "name": "wondergate",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "bin": {
     "wondergate": "bin/wondergate"
   },
