@@ -1,6 +1,6 @@
 {
   "name": "wondergate",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "bin": {
     "wondergate": "bin/wondergate"
   },
@@ -8,6 +8,7 @@
   "dependencies": {
     "chalk": "^2.3.0",
     "handlebars": "^4.0.11",
+    "internal-ip": "^3.0.1",
     "yargs": "^10.0.3"
   }
 }
