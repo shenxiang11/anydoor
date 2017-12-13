@@ -18,3 +18,8 @@ wondergate -h localhost # 设置host 为 localhost
 
 wondergate -d /usr # 设置跟目录为/usr
 ```
+
+## Todo
+- [x] 【feature】增加显示启动的本地服务的IP地址与二维码
+- [] 【bug】命令行工具没有打包js
+- [] 【feature】优化解码
