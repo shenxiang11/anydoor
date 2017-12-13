@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
   <style>
-    body{
+    body {
       margin: 30px;
     }
 
-    a{
+    a {
       display: block;
-      font-size: 30px;
     }
   </style>
 </head>
+
 <body>
   <h1>ip:{{ip}}</h1>
-  <div id="qrcode"></div>  
-{{#each files}}
+  <div id="qrcode"></div>
+  {{#each files}}
   <a href="{{../dir}}/{{file}}">[{{icon}}]{{file}}</a>
-{{/each}}
-  <script src="/src/templete/script/qrcode.min.js"></script>
+  {{/each}}
+  <script src="src/templete/script/vconsole.min.js"></script>
+  <script>
+    new VConsole()
+  </script>
+  <script src="src/templete/script/qrcode.min.js"></script>
   <script>
     var qrcode = new QRCode(document.getElementById("qrcode"), {
-	    text: "http://" + "{{ip}}",
-	    width: 128,
-	    height: 128,
-	    colorDark : "#000000",
-	    colorLight : "#ffffff",
-	    correctLevel : QRCode.CorrectLevel.H
+      text: "http://" + "{{ip}}",
+      width: 128,
+      height: 128,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
     })
-</script>
   </script>
 </body>
+
 </html>

@@ -1,12 +1,13 @@
 {
   "name": "wondergate",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "bin": {
     "wondergate": "bin/wondergate"
   },
   "main": "src/app.js",
   "dependencies": {
     "chalk": "^2.3.0",
+    "get-port": "^3.2.0",
     "handlebars": "^4.0.11",
     "internal-ip": "^3.0.1",
     "yargs": "^10.0.3"

@@ -16,6 +16,8 @@ const template = handlebars.compile(source.toString())
 
 module.exports = async function (req, res, filePath, conf) {
   try {
+    filePath = decodeURIComponent(filePath)
+    
     const stats = await stat(filePath)
 
     if (stats.isFile()) {
@@ -31,8 +33,8 @@ module.exports = async function (req, res, filePath, conf) {
       const {code, start, end} = range(stats.size, req, res)
 
       if (code === 200) {
-        res.statusCode = 200        
-        rs = fs.createReadStream(filePath)        
+        res.statusCode = 200
+        rs = fs.createReadStream(filePath)
       } else {
         res.statusCode = 206        
         rs = fs.createReadStream(filePath, {start, end})
