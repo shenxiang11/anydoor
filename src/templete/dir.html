@@ -23,7 +23,7 @@
   {{#each files}}
   <a href="{{../dir}}/{{file}}">[{{icon}}]{{file}}</a>
   {{/each}}
-  <script src="src/templete/script/qrcode.min.js"></script>
+  <!-- wondergate:load ../templete/script/qrcode.min.js -->
   <script>
     var qrcode = new QRCode(document.getElementById("qrcode"), {
       text: "http://" + "{{ip}}",

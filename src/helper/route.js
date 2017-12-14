@@ -9,6 +9,7 @@ const compress = require('./compress')
 const range = require('./range')
 const isFresh = require('./cache')
 const ip = require('./ip')
+const handleStatic = require('./handleStatic')
 
 const tplPath = path.join(__dirname, '../templete/dir.html')
 const source = fs.readFileSync(tplPath)
@@ -59,7 +60,7 @@ module.exports = async function (req, res, filePath, conf) {
           }
         })
       }
-      res.end(template(data))
+      res.end(handleStatic(template(data)))
     }
   } catch (ex) {
     console.error(ex)
