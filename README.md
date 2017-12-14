@@ -30,3 +30,10 @@ wondergate -d /usr # 设置跟目录为/usr
 - [ ] 【feature】移动端打开html自动加载注入vconsole
 - [ ] 【feature】修改文件自动刷新浏览器
 - [ ] 【optimize】删除多余css
+
+## 展示
+### PC
+![PC](./docs/pc.png)
+### Mobile
+![Mobile](./docs/mobile/png)
+
