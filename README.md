@@ -35,5 +35,5 @@ wondergate -d /usr # 设置跟目录为/usr
 ### PC
 ![PC](./docs/pc.png)
 ### Mobile
-![Mobile](./docs/mobile/png)
+![Mobile](./docs/mobile.png)
 
