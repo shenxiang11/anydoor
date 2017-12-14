@@ -10,6 +10,8 @@ const range = require('./range')
 const isFresh = require('./cache')
 const ip = require('./ip')
 const handleStatic = require('./handleStatic')
+const getIconName = require('./getIconName')
+const isPC = require('./isMobile')
 
 const tplPath = path.join(__dirname, '../templete/dir.html')
 const source = fs.readFileSync(tplPath)
@@ -50,13 +52,14 @@ module.exports = async function (req, res, filePath, conf) {
       res.setHeader('Content-Type', 'text/html')
       const dir = path.relative(conf.root, filePath)
       const data = {
+        isPC: isPC(req),
         ip: `${ip}:${conf.port}`,        
         title: path.basename(filePath),
         dir: dir ? `/${dir}` : '',
         files: files.map(file => {
           return {
             file,
-            icon: mime(file)
+            icon: getIconName(mime(file), file)
           }
         })
       }

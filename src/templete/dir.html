@@ -6,23 +6,33 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
-  <style>
-    body {
-      margin: 30px;
-    }
-
-    a {
-      display: block;
-    }
-  </style>
+  <!-- wondergate:load ../templete/style/bootstrap.min.css -->
+  <!-- wondergate:load ../templete/style/icono.min.css -->
+  <!-- wondergate:load ../templete/style/mystyle.css -->
 </head>
 
 <body>
-  <h1>ip:{{ip}}</h1>
-  <div id="qrcode"></div>
-  {{#each files}}
-  <a href="{{../dir}}/{{file}}">[{{icon}}]{{file}}</a>
-  {{/each}}
+  <div class="container-fluid">
+    <div class="row">
+      {{#each files}}        
+      <div class="col-md-3 col-sm-12">
+        <a class="link" href="{{../dir}}/{{file}}">
+          <i class="icono-{{icon}}"></i>
+          <span class="name">{{file}}</span>
+        </a>          
+      </div>
+      {{/each}}      
+    </div>
+  </div>
+  {{#if isPC}}
+  <div class="ipAddress">
+    <a href="//{{ip}}">
+      <i class="icono-imacBold"></i>
+      {{ip}}
+    </a>
+    <div id="qrcode"></div>
+  </div>
+  {{/if}}
   <!-- wondergate:load ../templete/script/qrcode.min.js -->
   <script>
     var qrcode = new QRCode(document.getElementById("qrcode"), {

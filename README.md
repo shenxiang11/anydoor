@@ -20,11 +20,13 @@ wondergate -d /usr # 设置跟目录为/usr
 ```
 
 ## Todo
+- [X] 【bug】手机扫码打开后不显示二维码(通过npm install -g安装后全局使用时)
 - [x] 【feature】增加显示启动的本地服务的IP地址与二维码
 - [x] 【bug】中文文件url转译后打不开
 - [x] 【feature】端口占用自动找未占用的端口
-- [ ] 【bug】命令行工具没有打包js(命令行工具找不到js文件)
+- [x] 【bug】命令行工具没有打包js(命令行工具找不到js文件)
+- [x] 【feature】优化界面
 - [ ] 【bug】中文文件乱码
-- [ ] 【feature】优化界面
-- [ ] 【bug】手机扫码打开后不显示二维码(通过npm install -g安装后全局使用时)
 - [ ] 【feature】移动端打开html自动加载注入vconsole
+- [ ] 【feature】修改文件自动刷新浏览器
+- [ ] 【optimize】删除多余css
